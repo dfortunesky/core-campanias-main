@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Check if commit message is conventional..."
+
+current_commit_message=$(cat "$1")
+echo "Latest commit message: $current_commit_message"
+conv_comm_pattern="^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test|wip)(\(.+\))?!?: .+$"
+
+if ! [[ $current_commit_message =~ $conv_comm_pattern ]]; then
+  echo "Conventional commit failed"
+  exit 1
+else
+  echo "Conventional commit OK"
+  exit 0
+fi

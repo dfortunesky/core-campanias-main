@@ -1,0 +1,1 @@
+imageMultibranchBuilderPipeline([PROJECT_TYPE: 'docker'])

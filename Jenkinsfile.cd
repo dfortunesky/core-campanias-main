@@ -1,0 +1,4 @@
+argocdDeployer(
+    ARGOCD_APP_NAME: 'core-campanias',
+    ARGOCD_PROJECT_NAME: 'afilmed'
+)

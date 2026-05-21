@@ -1,0 +1,3 @@
+env.IMAGE_NAME = 'swissmedical/core-campanias'
+env.IMAGE_REGISTRY = 'SMG'
+env.UN = 'SMMP'

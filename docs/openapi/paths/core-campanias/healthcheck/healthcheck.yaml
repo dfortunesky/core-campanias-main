@@ -1,0 +1,15 @@
+get:
+  summary: Health Check
+  description:
+    $ref: "./details.md"
+  operationId: healthCheck
+  tags:
+    - Healthcheck
+  responses:
+    "200":
+      description: API operativa
+      content:
+        application/json:
+          schema:
+            $ref: "../../../components/schemas/core-campanias/healthcheck.yaml"
+  security: []

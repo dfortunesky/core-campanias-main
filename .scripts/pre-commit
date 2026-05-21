@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Running lint check..."
+
+./mvnw checkstyle:check
+
+status=$?
+
+# return 1 exit code if running checks fails
+[ $status -ne 0 ] && exit 1
+git add .
+exit 0

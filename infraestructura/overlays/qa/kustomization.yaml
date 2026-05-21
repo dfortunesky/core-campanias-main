@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - "../../base"
+  - externalSecret.yaml
+
+namespace: afilmed-qa
+
+images:
+- name: IMAGE_VALUE
+  newName: registry.swissmedical.com.ar/swissmedical/core-campanias:latest-qa
+
+# MODIFICAR EL ARCHIVO './application.envs' PARA CONFIGURAR LAS VARIABLES DE ENTORNO
+configMapGenerator:
+- name: core-campanias-properties
+  envs:
+  - application.envs
+

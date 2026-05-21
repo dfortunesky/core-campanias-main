@@ -1,0 +1,55 @@
+type: object
+properties:
+  path:
+    type: string
+    example: "/actuator/health"
+  statusCode:
+    type: integer
+    example: 200
+  data:
+    type: object
+    properties:
+      status:
+        type: string
+        example: "ok"
+      info:
+        type: object
+        example: {
+          "database": {
+            "status": "up"
+          },
+          "cache": {
+            "status": "up"
+          },
+          "externalService": {
+            "status": "up"
+          }
+        }
+      details:
+        type: object
+        example: {
+          "database": {
+            "status": "up",
+            "details": {
+              "database": "PostgreSQL",
+              "result": "Connection OK"
+            }
+          },
+          "cache": {
+            "status": "up",
+            "details": {
+              "cache": "Redis",
+              "result": "Connection OK"
+            }
+          },
+          "externalService": {
+            "status": "up",
+            "details": {
+              "service": "PokemonClient",
+              "result": "Connection OK"
+            }
+          }
+        }
+      error:
+        type: object
+        example: {}

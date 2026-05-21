@@ -1,0 +1,44 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: core-campanias
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: core-campanias
+  template:
+    metadata:
+      labels:
+        app: core-campanias
+    spec:
+      containers:
+        - name: core-campanias
+          image: IMAGE_VALUE
+          envFrom:
+          - configMapRef:
+              name: core-campanias-properties
+          env:
+            - name: DB_DRIVER_CLASS
+              valueFrom:
+                secretKeyRef:
+                  key: CORE_CAMPANIAS-DB_DRIVER_CLASS
+                  name: afilmed-secret
+            - name: DB_URL
+              valueFrom:
+                secretKeyRef:
+                  key: CORE_CAMPANIAS-DB_URL
+                  name: afilmed-secret
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  key: CORE_CAMPANIAS-DB_USER
+                  name: afilmed-secret
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: CORE_CAMPANIAS-DB_PASSWORD
+                  name: afilmed-secret
+          imagePullPolicy: Always
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30

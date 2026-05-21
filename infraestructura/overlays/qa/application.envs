@@ -1,0 +1,3 @@
+#Variables de entorno en formato:
+#KEY=VALUE
+#Advertencia: no exponer valores sensibles (usuarios, passwords, keys)

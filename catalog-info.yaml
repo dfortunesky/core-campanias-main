@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: "core-campanias"
+  links:
+    - url: https://smg-devtools.swm.com.ar/jenkins-deployer/job/afilmed/job/alfred.builder.SMMP.core-campanias/
+      title: Pipeline Builder
+      icon: dashboard
+    - url: https://smg-devtools.swm.com.ar/jenkins-deployer/job/afilmed/job/alfred.deployer.SMMP.core-campanias/
+      title: Pipeline Deployer
+      icon: dashboard
+  annotations:
+    smg.jenkins/job-builder: jenkins-coe-devops-deployer:afilmed/alfred.builder.SMMP.core-campanias
+    smg.jenkins/job-deployer: jenkins-local:afilmed/alfred.deployer.SMMP.core-campanias
+spec:
+  type: openapi
+  system: "afilmed"
+  owner: AD-SMGDevs # DEFINIR QUIEN VA A SER EL OWNER DEL COMPONENTE - GROUP o USER
+  lifecycle: experimental
+  definition:
+    $openapi: "./openapi.yaml"
