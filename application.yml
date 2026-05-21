@@ -11,7 +11,7 @@ spring:
     livereload:
       enabled: true
   application:
-    name: java-sprint-boot-template
+    name: core-template
   cloud:
     discovery:
       client:
@@ -49,7 +49,7 @@ spring:
 management:
   metrics:
     tags:
-      application: java-sprint-boot-template
+      application: core-template
   endpoint:
     health: 
       show-details: always

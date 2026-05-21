@@ -1,7 +1,6 @@
--- CREATE DATABASE IF NOT EXIST PAYROLL;
-
-CREATE TABLE IF NOT EXISTS `EMPLOYEES`(
-    `id`          INTEGER PRIMARY KEY AUTO_INCREMENT,
-    `name`       VARCHAR(100) NOT NULL,
-    `role`      VARCHAR(100) NOT NULL
-);
+-- Add your H2 test schema here
+-- Example:
+-- CREATE TABLE IF NOT EXISTS my_table (
+--     id INTEGER PRIMARY KEY AUTO_INCREMENT,
+--     name VARCHAR(100) NOT NULL
+-- );

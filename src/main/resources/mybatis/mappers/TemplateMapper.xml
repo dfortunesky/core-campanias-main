@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+  Template mapper for MyBatis stored procedure calls against Sybase.
+
+  Steps to add a new query:
+  1. Create a model class in adapter/mybatis/model/ with the input parameters.
+  2. Create the mapper interface in adapter/mybatis/mappers/ annotated with @Mapper.
+  3. Define the resultMap and select/call statement below.
+  4. Implement the output port in adapter/mybatis/ injecting the mapper interface.
+
+  Example stored procedure call:
+  <select id="myProcedure" statementType="CALLABLE" resultMap="myResultMap">
+      {call mydb..my_stored_proc(
+          #{param1, jdbcType=INTEGER, mode=IN},
+          #{param2, jdbcType=VARCHAR, mode=IN}
+      )}
+  </select>
+-->
+<mapper namespace="ar.com.smg.template.adapter.mybatis.mappers.TemplateMapper">
+
+</mapper>
